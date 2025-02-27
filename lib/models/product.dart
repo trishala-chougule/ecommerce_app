@@ -28,18 +28,6 @@ List<Product> getProductList(String category) {
   if (category == "Electronics") {
     return [
       Product(
-        name: 'Laptop',
-        price: 54090,
-        originalPrice: 70090,
-        discount: '23% off',
-        rating: 4.5,
-        reviews: 419,
-        imageUrl: 'assets/laptop_real.glb',
-        deliveryDate: 'Fri, 28 Feb',
-        colors: ['Black', 'Brown', 'Gray'],
-        placement: "floor",
-      ),
-      Product(
         name: 'Retro Robot - 3D Model',
         price: 4504,
         originalPrice: 9010,
@@ -49,18 +37,6 @@ List<Product> getProductList(String category) {
         imageUrl: 'assets/robot.glb',
         deliveryDate: 'Sat, 1 Mar',
         colors: ['Gray'],
-        placement: "floor",
-      ),
-      Product(
-        name: 'POSMachine',
-        price: 999,
-        originalPrice: 1399,
-        discount: '29% off',
-        rating: 4.5,
-        reviews: 293,
-        imageUrl: 'assets/POSMachine.gltf',
-        deliveryDate: 'Sat, 1 Mar',
-        colors: ['Pink', 'Black', 'Gray'],
         placement: "floor",
       ),
     ];
@@ -111,18 +87,6 @@ List<Product> getProductList(String category) {
   } else {
     return [
       Product(
-        name: 'Laptop',
-        price: 54090,
-        originalPrice: 70090,
-        discount: '23% off',
-        rating: 4.5,
-        reviews: 419,
-        imageUrl: 'assets/laptop_real.glb',
-        deliveryDate: 'Fri, 28 Feb',
-        colors: ['Black', 'Brown', 'Gray'],
-        placement: "floor",
-      ),
-      Product(
         name: 'Chair',
         price: 879,
         originalPrice: 1499,
@@ -168,18 +132,6 @@ List<Product> getProductList(String category) {
         imageUrl: 'assets/money_plant.glb',
         deliveryDate: 'Sat, 1 Mar',
         colors: ['green', 'Black', 'Gray'],
-        placement: "floor",
-      ),
-      Product(
-        name: 'POSMachine',
-        price: 999,
-        originalPrice: 1399,
-        discount: '29% off',
-        rating: 4.5,
-        reviews: 293,
-        imageUrl: 'assets/POSMachine.gltf',
-        deliveryDate: 'Sat, 1 Mar',
-        colors: ['Pink', 'Black', 'Gray'],
         placement: "floor",
       ),
     ];

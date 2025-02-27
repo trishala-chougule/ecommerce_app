@@ -65,12 +65,10 @@ flutter:
   uses-material-design: true
 
   assets: 
-    - assets/laptop_real.glb
     - assets/gift_box.glb
     - assets/robot.glb
     - assets/money_plant.glb
     - assets/chair.glb
-    - assets/POSMachine.gltf
     - assets/logo.jpg
   # To add assets to your application, add an assets section, like this:
   # assets:

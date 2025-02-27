@@ -1,0 +1,2 @@
+D:/OfficeProject/AI/19_02_2025/ar_model_viewer/android/app/.cxx/Debug/61p3h5i3/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/OfficeProject/AI/19_02_2025/ar_model_viewer/android/app/.cxx/Debug/61p3h5i3/armeabi-v7a/CMakeFiles/rebuild_cache.dir
