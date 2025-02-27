@@ -6857,7 +6857,7 @@ VP:function VP(){},
 VQ:function VQ(){},
 VR:function VR(){},
 VS:function VS(){},
-aJp(a){var s,r="Retro Robot - 3D Model",q="assets/robot.glb",p="Sat, 1 Mar",o="floor",n="assets/chair.glb",m="Wed, 26 Feb",l="Money Plant",k="assets/money_plant.glb",j="Gift Box",i="assets/gift_box.glb"
+aJp(a){var s,r="Retro Robot - 3D Model",q="assets/assets/robot.glb",p="Sat, 1 Mar",o="floor",n="assets/assets/chair.glb",m="Wed, 26 Feb",l="Money Plant",k="assets/assets/money_plant.glb",j="Gift Box",i="assets/assets/gift_box.glb"
 if(a==="Electronics")return A.b([new A.he(r,4504,9010,"50% off",4.5,8645,q,p,o)],t._V)
 else if(a==="Home Decor")return A.b([new A.he("Chair",879,1499,"41% off",4.2,672,n,m,o)],t._V)
 else if(a==="The Leafy Corner")return A.b([new A.he(l,339,599,"43% off",4.2,290,k,p,o)],t._V)
