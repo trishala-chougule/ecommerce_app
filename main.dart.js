@@ -37846,7 +37846,7 @@ a0x(){var s=null
 return A.eK(A.a([A.ny(A.atm(B.Xj,new A.aiQ(),A.atn(s,s,s,s,s,s,s,s,s,B.ez,s,s,B.mq,s,s,B.A6,s,s,s,s)),1),B.RS,A.ny(A.nu(B.Xt,new A.aiR(),A.Hx(s,s,B.tv,s,s,s,s,s,s,s,s,s,B.mq,s,s,s,s,s,s)),1)],t.p),B.B,B.x,B.u)},
 Jy(a,b){var s=null,r=A.jM(B.F_,s,s,s),q=A.cY(s,s,10),p=t.p
 p=A.a([A.nu(A.cY(A.eK(A.a([r,q,A.bp(this.d?"Hide QR Code":"Try in Your Home",s,s,s,s,s,s)],p),B.B,B.x,B.u),s,200),new A.aiU(this),s),A.cY(s,2,s)],p)
-if(this.d)p.push(new A.yW("https://yourdomain.com/productdetail?id="+a+"&category="+b,-1,200,s))
+if(this.d)p.push(new A.yW("https://ecommerce-app-dtz.pages.dev/productdetail?id="+a+"&category="+b,-1,200,s))
 return new A.aW(new A.af(0,0,0,0),A.c5(p,B.B,B.ch,B.u),s)}}
 A.aiW.prototype={
 $1(a){return a.z===this.a},
