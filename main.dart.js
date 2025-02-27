@@ -6857,13 +6857,13 @@ VP:function VP(){},
 VQ:function VQ(){},
 VR:function VR(){},
 VS:function VS(){},
-aJp(a){var s,r="Retro Robot - 3D Model",q="assets/assets/robot.glb",p="Sat, 1 Mar",o="floor",n="assets/assets/chair.glb",m="Wed, 26 Feb",l="Money Plant",k="assets/assets/money_plant.glb",j="Gift Box",i="assets/assets/gift_box.glb"
-if(a==="Electronics")return A.b([new A.he(r,4504,9010,"50% off",4.5,8645,q,p,o)],t._V)
-else if(a==="Home Decor")return A.b([new A.he("Chair",879,1499,"41% off",4.2,672,n,m,o)],t._V)
-else if(a==="The Leafy Corner")return A.b([new A.he(l,339,599,"43% off",4.2,290,k,p,o)],t._V)
+aJp(a){var s,r="Retro Robot - 3D Model",q="Sat, 1 Mar",p="floor",o="assets/assets/chair.glb",n="Wed, 26 Feb",m="Money Plant",l="assets/assets/money_plant.glb",k="Gift Box",j="assets/assets/gift_box.glb"
+if(a==="Electronics")return A.b([new A.he(r,4504,9010,"50% off",4.5,8645,"./assets/assets/robot.glb",q,p)],t._V)
+else if(a==="Home Decor")return A.b([new A.he("Chair",879,1499,"41% off",4.2,672,o,n,p)],t._V)
+else if(a==="The Leafy Corner")return A.b([new A.he(m,339,599,"43% off",4.2,290,l,q,p)],t._V)
 else{s=t._V
-if(a==="The Gift Spot")return A.b([new A.he(j,389,499,"22% off",3.8,14505,i,m,o)],s)
-else return A.b([new A.he("Chair",879,1499,"41% off",4.2,672,n,m,o),new A.he(j,389,499,"22% off",3.8,14505,i,m,o),new A.he(r,4504,9010,"50% off",4.5,8645,q,p,o),new A.he(l,339,599,"43% off",4.2,290,k,p,o)],s)}},
+if(a==="The Gift Spot")return A.b([new A.he(k,389,499,"22% off",3.8,14505,j,n,p)],s)
+else return A.b([new A.he("Chair",879,1499,"41% off",4.2,672,o,n,p),new A.he(k,389,499,"22% off",3.8,14505,j,n,p),new A.he(r,4504,9010,"50% off",4.5,8645,"assets/assets/robot.glb",q,p),new A.he(m,339,599,"43% off",4.2,290,l,q,p)],s)}},
 he:function he(a,b,c,d,e,f,g,h,i){var _=this
 _.a=a
 _.b=b
