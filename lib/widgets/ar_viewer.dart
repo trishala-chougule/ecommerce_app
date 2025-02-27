@@ -135,7 +135,7 @@ class _ARViewerScreenState extends State<ARViewerScreen> {
   }
 
   Widget _buildModelViewer() {
-    if (UniversalPlatform.isWeb) {
+ /*   if (UniversalPlatform.isWeb) {
       return ModelViewer(
         src: widget.modelPath,
         alt: "3D Astronaut",
@@ -147,33 +147,30 @@ class _ARViewerScreenState extends State<ARViewerScreen> {
         /*         shadowIntensity: 0, // Remove shadow effect
         environmentImage: "none", // Disable environmental lighting */
       );
-    } else if (UniversalPlatform.isAndroid || UniversalPlatform.isIOS) {
+    } else if (UniversalPlatform.isAndroid || UniversalPlatform.isIOS) {*/
       return ModelViewer(
         src: widget.modelPath,
         alt: "3D Model",
         ar: true,
-        arModes: ["scene-viewer", "quick-look"],
+        arModes: ["scene-viewer", "quick-look", "webxr"],
         autoRotate: true,
-        cameraControls: true,
         loading: Loading.eager,
-        autoPlay: true,
-        disableTap: true,
+        cameraControls: true, //set to false
+        autoPlay: true,  //set to false
         disableZoom: true,
+        disableTap: true, // Prevents accidental movement
+        arPlacement: /*widget.placement == "floor"*/ widget.placement.contains("floor") ? ArPlacement.floor : ArPlacement.wall,
         arScale: ArScale.fixed,
-        onWebViewCreated: (controller) {
-          controller.evaluateJavascript("""
-                const modelViewer = document.getElementById('modelViewer');
-                modelViewer.addEventListener('load', () => {
-                  modelViewer.cameraOrbit = '0deg 90deg auto';
-                  modelViewer.disableZoom = true; // Disables pinch zooming
-                });
-              """);
-        },
         iosSrc: UniversalPlatform.isIOS ? widget.modelPath : null,
+        interactionPromptThreshold: 0,
+        cameraOrbit: "0deg 45deg auto",
+        shadowIntensity: 1,
+        exposure: 1.0,
+        backgroundColor: Colors.transparent,
       );
-    } else {
+  /*  } else {
       return const Center(child: Text('Platform not supported'));
-    }
+    }*/
   }
 }
 

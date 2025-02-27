@@ -32,7 +32,7 @@ class Biz4ShopApp extends StatelessWidget {
         '/contact': (context) => const ContactScreen(),
         '/about': (context) => const AboutScreen(),
         '/categorylist': (context) => const CategoryList(),
-        '/productdetail': (context) => const ProductDetails(),
+         ProductDetails.routeName: (context) =>  ProductDetails(),
       },
     );
   }

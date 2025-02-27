@@ -9,6 +9,8 @@ class Product {
   final String deliveryDate;
   final List<String> colors;
   final String placement;
+  final String id;
+  final String category;
 
   Product({
     required this.name,
@@ -21,6 +23,8 @@ class Product {
     required this.deliveryDate,
     this.colors = const [],
     required this.placement,
+    required this.id,
+    required this.category,
   });
 }
 
@@ -34,10 +38,12 @@ List<Product> getProductList(String category) {
         discount: '50% off',
         rating: 4.5,
         reviews: 8645,
-        imageUrl: 'assets/robot.glb',
+        imageUrl: 'assets/assets/robot.glb',
         deliveryDate: 'Sat, 1 Mar',
         colors: ['Gray'],
         placement: "floor",
+        id: "1",
+        category: "Electronics",
       ),
     ];
   } else if (category == "Home Decor") {
@@ -49,10 +55,12 @@ List<Product> getProductList(String category) {
         discount: '41% off',
         rating: 4.2,
         reviews: 672,
-        imageUrl: 'assets/chair.glb',
+        imageUrl: 'assets/assets/chair.glb',
         deliveryDate: 'Wed, 26 Feb',
         colors: ['Black', 'Navy', 'Pink', 'Green'],
         placement: "floor",
+        id: "2",
+        category: "Home Decor",
       ),
     ];
   } else if (category == "The Leafy Corner") {
@@ -64,10 +72,12 @@ List<Product> getProductList(String category) {
         discount: '43% off',
         rating: 4.2,
         reviews: 290,
-        imageUrl: 'assets/money_plant.glb',
+        imageUrl: 'assets/assets/money_plant.glb',
         deliveryDate: 'Sat, 1 Mar',
         colors: ['green', 'Black', 'Gray'],
         placement: "floor",
+        id: "4",
+        category: "The Leafy Corner",
       ),
     ];
   } else if (category == "The Gift Spot") {
@@ -79,9 +89,11 @@ List<Product> getProductList(String category) {
         discount: '22% off',
         rating: 3.8,
         reviews: 14505,
-        imageUrl: 'assets/gift_box.glb',
+        imageUrl: 'assets/assets/gift_box.glb',
         deliveryDate: 'Wed, 26 Feb',
         placement: "floor",
+        id: "3",
+        category: "The Gift Spot",
       ),
     ];
   } else {
@@ -93,10 +105,12 @@ List<Product> getProductList(String category) {
         discount: '41% off',
         rating: 4.2,
         reviews: 672,
-        imageUrl: 'assets/chair.glb',
+        imageUrl: 'assets/assets/chair.glb',
         deliveryDate: 'Wed, 26 Feb',
         colors: ['Black', 'Navy', 'Pink', 'Green'],
         placement: "floor",
+        id: "2",
+        category: "Home Decor",
       ),
       Product(
         name: 'Gift Box',
@@ -105,9 +119,11 @@ List<Product> getProductList(String category) {
         discount: '22% off',
         rating: 3.8,
         reviews: 14505,
-        imageUrl: 'assets/gift_box.glb',
+        imageUrl: 'assets/assets/gift_box.glb',
         deliveryDate: 'Wed, 26 Feb',
         placement: "floor",
+        id: "3",
+        category: "The Gift Spot",
       ),
       Product(
         name: 'Retro Robot - 3D Model',
@@ -116,10 +132,12 @@ List<Product> getProductList(String category) {
         discount: '50% off',
         rating: 4.5,
         reviews: 8645,
-        imageUrl: 'assets/robot.glb',
+        imageUrl: 'assets/assets/robot.glb',
         deliveryDate: 'Sat, 1 Mar',
         colors: ['Gray'],
         placement: "floor",
+        id: "1",
+        category: "Electronics",
       ),
 
       Product(
@@ -129,10 +147,12 @@ List<Product> getProductList(String category) {
         discount: '43% off',
         rating: 4.2,
         reviews: 290,
-        imageUrl: 'assets/money_plant.glb',
+        imageUrl: 'assets/assets/money_plant.glb',
         deliveryDate: 'Sat, 1 Mar',
         colors: ['green', 'Black', 'Gray'],
         placement: "floor",
+        id: "4",
+        category: "The Leafy Corner",
       ),
     ];
   }

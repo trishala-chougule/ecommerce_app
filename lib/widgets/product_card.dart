@@ -1,6 +1,9 @@
+import 'package:ar_model_viewer/screens/product_details.dart';
+import 'package:ar_model_viewer/screens/product_list_screen.dart';
 import 'package:ar_model_viewer/widgets/ar_viewer.dart';
 import 'package:ar_model_viewer/models/product.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -11,7 +14,25 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/productdetail', arguments: product);
+        //Navigator.pushNamed(context, '/productdetail', arguments: product);
+        // Navigator.pushNamed(context, '/productdetail/${product.id}');
+        // context.go('/productdetail/${product.category}/${product.id}');
+        //Navigator.pushNamed(context, '/productdetail/${product.category}/${product.id}');
+
+        /*  Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProductDetails(
+                    id: product.id,
+                    category: product.category,
+                  ),
+                ),
+              );*/
+        Navigator.of(context).pushNamed(
+           ProductDetails.routeName, // Use the constant, n
+          arguments: {
+            'id': product.id, 'category': product.category},
+        );
       },
       child: Container(
         decoration: BoxDecoration(

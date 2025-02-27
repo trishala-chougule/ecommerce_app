@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 import '../models/product.dart';
 import '../widgets/ar_viewer.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/global_drawer.dart';
 
-class ProductDetails extends StatelessWidget {
-  const ProductDetails({super.key});
+class ProductDetails extends StatefulWidget {
+  static const routeName = '/productdetail';
+
+  @override
+  _ProductDetailsState createState() => _ProductDetailsState();
+}
+
+class _ProductDetailsState extends State<ProductDetails> {
+  bool _isQrVisible = false;
 
   @override
   Widget build(BuildContext context) {
     // Retrieve the selected category from route arguments
-    final Product product =
-        ModalRoute.of(context)?.settings.arguments as Product;
+    final arguments =
+        ModalRoute.of(context)!.settings.arguments as Map<String, String>;
+    final productId = arguments['id'];
+    final category = arguments['category'];
 
+    final Product product = getProductList(category!).firstWhere(
+        (product) => product.id == productId);
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
     return Scaffold(
@@ -26,6 +38,14 @@ class ProductDetails extends StatelessWidget {
 
           return isNarrow ? mobileView(product) : webView(product);
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Custom back navigation to pop the current screen from the stack
+          Navigator.pop(context);
+        },
+        child: Icon(Icons.arrow_back),
+        tooltip: 'Go Back',
       ),
     );
   }
@@ -115,17 +135,11 @@ class ProductDetails extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 8),
-        const Text(
-          'M.R.P.: ₹1499 (41% off)',
-          style: TextStyle(fontSize: 16, color: Colors.black),
-        ),
       ],
     );
   }
 
   Widget _buildProductDetails(Product product) {
-    // This would contain additional product details
-    // Not shown in the image but typically appears below the main card
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -151,6 +165,10 @@ class ProductDetails extends StatelessWidget {
         _buildRatingRow(product),
         const SizedBox(height: 8),
         _buildPriceRow(product),
+        const Text(
+          'M.R.P.: ₹1499 (41% off)',
+          style: TextStyle(fontSize: 16, color: Colors.black),
+        ),
         const SizedBox(height: 8),
         Row(
           children: [
@@ -203,7 +221,12 @@ class ProductDetails extends StatelessWidget {
         children: [
           _buildProductImageCard(product),
           const SizedBox(height: 16),
-          _buildProductDetails(product),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 7),
+            child: _buildProductDetails(product),
+          ),
+          SizedBox(height: 5,),
+         _buildViewQRCode(product.id, product.category),
         ],
       ),
     );
@@ -227,6 +250,8 @@ class ProductDetails extends StatelessWidget {
                   children: [
                     const SizedBox(height: 10),
                     _buildProductDetails(product),
+                    const SizedBox(height: 10),
+                    _buildViewQRCode(product.id, product.category),
                     const SizedBox(height: 20),
                     _buildActionButtons(),
                   ],
@@ -235,6 +260,43 @@ class ProductDetails extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  _buildViewQRCode(String id, String category) {
+    return Padding(
+      padding: EdgeInsets.all(0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                _isQrVisible = !_isQrVisible;
+              });
+            },
+            child: SizedBox(
+              width: 200,
+              child: Row(
+                children: [
+                  Icon(Icons.qr_code),
+                  SizedBox(width: 10),
+                  Text(_isQrVisible ? "Hide QR Code" : "Try in Your Home"),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 2),
+          if (_isQrVisible)
+            QrImageView(
+              data:'https://yourdomain.com/productdetail?id=$id&category=$category',
+                 // 'https://ecommerce-app-dtz.pages.dev/productdetail/${id}?category=${category}',
+              version: QrVersions.auto,
+              size: 200.0,
+            ),
+        ],
       ),
     );
   }
