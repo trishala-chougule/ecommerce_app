@@ -24442,7 +24442,7 @@ _.f=null},
 abu:function abu(a){this.a=a},
 a2d:function a2d(a,b){this.a=a
 this.b=b},
-yj:function yj(a,b,c,d,e,f,g,h,i,j){var _=this
+yj:function yj(a,b,c,d,e,f,g,h,i,j,k){var _=this
 _.c=a
 _.d=b
 _.f=c
@@ -24450,9 +24450,10 @@ _.x=d
 _.y=e
 _.as=f
 _.ax=g
-_.db=h
-_.y1=i
-_.a=j},
+_.cx=h
+_.db=i
+_.y1=j
+_.a=k},
 J2:function J2(a){var _=this
 _.d=!0
 _.e=a
@@ -25203,6 +25204,7 @@ case 2:n+=' loading="eager"'
 break}if(!0)n+=" ar"
 n+=' ar-modes="'+B.ig.dG(B.b.bW(e," "))+'"'
 if(!0)n+=" camera-controls"
+if(!0)n+=" disable-zoom"
 if(!0)n+=" auto-rotate"
 s=i.C()
 r=i.C()
@@ -37932,7 +37934,7 @@ if(q.e.length!==0)return q.a0E()
 s=q.a.c
 r=A.a(["scene-viewer","quick-look","webxr"],t.s)
 q.a.toString
-return A.oY(p,B.A,new A.yj(s,"3D Model",B.Lg,!0,r,p,!0,!0,B.A,p),p,p,p)},
+return A.oY(p,B.A,new A.yj(s,"3D Model",B.Lg,!0,r,p,!0,!0,!0,B.A,p),p,p,p)},
 a0E(){var s=null
 return A.oY(s,B.A,A.f1(new A.aX(B.bV,A.c5(A.a([B.Ff,B.bu,A.bp(this.e,s,s,s,B.VM,B.bb,s),B.hF,A.nz(B.XJ,new A.ad1(this),s)],t.p),B.B,B.ch,B.u),s),s,s),s,s,s)}}
 A.ad2.prototype={
@@ -80770,7 +80772,7 @@ m=o.d
 l=o.f
 k=o.y
 j=o.as
-i=A.aCH(m,null,null,!0,k,null,!0,null,o.y1,!0,null,null,!0,null,null,null,null,null,null,p,null,null,null,null,null,null,j,l,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,n,null,null,null,null)
+i=A.aCH(m,null,null,!0,k,null,!0,null,o.y1,!0,null,null,!0,null,null,!0,null,null,null,p,null,null,null,null,null,null,j,l,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,n,null,null,null,null)
 $.aqO()
 $.vg().zf("model-viewer-html-"+q.e,new A.a5i(i),!0)
 q.an(new A.a5j(q))
