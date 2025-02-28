@@ -24442,22 +24442,24 @@ _.d=d
 _.e=-1
 _.f=null},
 abs:function abs(a){this.a=a},
-yk:function yk(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o){var _=this
+yk:function yk(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q){var _=this
 _.c=a
 _.d=b
 _.x=c
 _.y=d
 _.as=e
 _.ax=f
-_.cx=g
-_.db=h
-_.fy=i
-_.go=j
-_.p3=k
-_.p4=l
-_.R8=m
-_.to=n
-_.a=o},
+_.ay=g
+_.ch=h
+_.cx=i
+_.db=j
+_.fy=k
+_.go=l
+_.p3=m
+_.p4=n
+_.R8=o
+_.to=p
+_.a=q},
 J3:function J3(a){var _=this
 _.d=!0
 _.e=a
@@ -25203,6 +25205,8 @@ aCH(a,b,c,d,e,f,g,h,i,j,k,l,m,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,b0,b1,b2,b3,b4,b5,b6
 if(!0)n+=" ar"
 n+=' ar-modes="'+B.dV.dg(B.b.bW(e," "))+'"'
 if(!0)n+=" camera-controls"
+if(!0)n+=" disable-pan"
+if(!0)n+=" disable-tap"
 if(!0)n+=" disable-zoom"
 if(!0)n+=" auto-rotate"
 n+=' interaction-prompt-threshold="'+b1+'"'
@@ -37940,7 +37944,7 @@ return A.Q($async$AX,r)},
 J(a){var s=this,r=null
 if(s.d)return B.PX
 if(s.e.length!==0)return s.a0E()
-return A.oY(r,B.A,new A.yk(s.a.c,"3D model",!0,A.a(["scene-viewer","quick-look","webxr"],t.s),r,!0,!0,!0,0,"0deg 45deg auto","neutral",1,1,!0,r),r,r,r)},
+return A.oY(r,B.A,new A.yk(s.a.c,"3D model",!0,A.a(["scene-viewer","quick-look","webxr"],t.s),r,!0,!0,!0,!0,!0,0,"0deg 45deg auto","neutral",1,1,!0,r),r,r,r)},
 a0E(){var s=null
 return A.oY(s,B.A,A.f1(new A.aX(B.bV,A.c5(A.a([B.Ff,B.bu,A.bp(this.e,s,s,s,B.VL,B.bb,s),B.hG,A.nz(B.XI,new A.ad_(this),s)],t.p),B.B,B.ch,B.u),s),s,s),s,s,s)}}
 A.ad0.prototype={
@@ -80776,7 +80780,7 @@ m=o.d
 l=o.y
 k=o.as
 j=o.fy
-i=A.aCH(m,null,null,!0,l,!0,!0,null,B.A,!0,o.go,null,!0,null,null,!0,o.p3,o.p4,null,p,null,null,null,null,j,null,k,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,o.R8,null,null,n,null,null,null,null)
+i=A.aCH(m,null,null,!0,l,!0,!0,null,B.A,!0,o.go,null,!0,!0,!0,!0,o.p3,o.p4,null,p,null,null,null,null,j,null,k,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,o.R8,null,null,n,null,null,null,null)
 $.aqO()
 $.vh().zf("model-viewer-html-"+q.e,new A.a5i(i),!0)
 q.an(new A.a5j(q))
