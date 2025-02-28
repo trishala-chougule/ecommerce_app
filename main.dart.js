@@ -6866,13 +6866,13 @@ Wm:function Wm(){},
 Wn:function Wn(){},
 Wo:function Wo(){},
 Wp:function Wp(){},
-ax4(a){var s,r="Electronics",q="Retro Robot - 3D Model",p="assets/assets/robot.glb",o="Sat, 1 Mar",n="floor",m="assets/assets/chair.glb",l="Wed, 26 Feb",k="Home_Decor",j="Money Plant",i="assets/assets/money_plant.glb",h="The_Leafy_Corner",g="Gift Box",f="assets/assets/gift_box.glb",e="The_Gift_Spot"
-if(a==="Electronics")return A.a([new A.fM(q,4504,9010,"50% off",4.5,8645,p,o,n,"1",r)],t._V)
-else if(a==="Home Decor")return A.a([new A.fM("Chair",879,1499,"41% off",4.2,672,m,l,n,"2",k)],t._V)
-else if(a==="The Leafy Corner")return A.a([new A.fM(j,339,599,"43% off",4.2,290,i,o,n,"4",h)],t._V)
+ax4(a){var s,r="Retro Robot - 3D Model",q="assets/assets/robot.glb",p="Sat, 1 Mar",o="floor",n="electronics",m="assets/assets/chair.glb",l="Wed, 26 Feb",k="home_decor",j="Money Plant",i="assets/assets/money_plant.glb",h="the_leafy_corner",g="Gift Box",f="assets/assets/gift_box.glb",e="the_gift_spot"
+if(a==="Electronics")return A.a([new A.fM(r,4504,9010,"50% off",4.5,8645,q,p,o,"1",n)],t._V)
+else if(a==="Home Decor")return A.a([new A.fM("Chair",879,1499,"41% off",4.2,672,m,l,o,"2",k)],t._V)
+else if(a==="The Leafy Corner")return A.a([new A.fM(j,339,599,"43% off",4.2,290,i,p,o,"4",h)],t._V)
 else{s=t._V
-if(a==="The Gift Spot")return A.a([new A.fM(g,389,499,"22% off",3.8,14505,f,l,n,"3",e)],s)
-else return A.a([new A.fM("Chair",879,1499,"41% off",4.2,672,m,l,n,"2",k),new A.fM(g,389,499,"22% off",3.8,14505,f,l,n,"3",e),new A.fM(q,4504,9010,"50% off",4.5,8645,p,o,n,"1",r),new A.fM(j,339,599,"43% off",4.2,290,i,o,n,"4",h)],s)}},
+if(a==="The Gift Spot")return A.a([new A.fM(g,389,499,"22% off",3.8,14505,f,l,o,"3",e)],s)
+else return A.a([new A.fM("Chair",879,1499,"41% off",4.2,672,m,l,o,"2",k),new A.fM(g,389,499,"22% off",3.8,14505,f,l,o,"3",e),new A.fM(r,4504,9010,"50% off",4.5,8645,q,p,o,"1",n),new A.fM(j,339,599,"43% off",4.2,290,i,p,o,"4",h)],s)}},
 fM:function fM(a,b,c,d,e,f,g,h,i,j,k){var _=this
 _.a=a
 _.b=b
