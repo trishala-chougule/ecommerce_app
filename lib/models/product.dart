@@ -43,7 +43,7 @@ List<Product> getProductList(String category) {
         colors: ['Gray'],
         placement: "floor",
         id: "1",
-        category: "Electronics",
+        category: "electronics",
       ),
     ];
   } else if (category == "Home Decor") {
@@ -60,7 +60,7 @@ List<Product> getProductList(String category) {
         colors: ['Black', 'Navy', 'Pink', 'Green'],
         placement: "floor",
         id: "2",
-        category: "Home Decor",
+        category: "home_decor",
       ),
     ];
   } else if (category == "The Leafy Corner") {
@@ -77,7 +77,7 @@ List<Product> getProductList(String category) {
         colors: ['green', 'Black', 'Gray'],
         placement: "floor",
         id: "4",
-        category: "The Leafy Corner",
+        category: "the_leafy_corner",
       ),
     ];
   } else if (category == "The Gift Spot") {
@@ -93,7 +93,7 @@ List<Product> getProductList(String category) {
         deliveryDate: 'Wed, 26 Feb',
         placement: "floor",
         id: "3",
-        category: "The Gift Spot",
+        category: "the_gift_spot",
       ),
     ];
   } else {
@@ -110,7 +110,7 @@ List<Product> getProductList(String category) {
         colors: ['Black', 'Navy', 'Pink', 'Green'],
         placement: "floor",
         id: "2",
-        category: "Home Decor",
+        category: "home_decor",
       ),
       Product(
         name: 'Gift Box',
@@ -123,7 +123,7 @@ List<Product> getProductList(String category) {
         deliveryDate: 'Wed, 26 Feb',
         placement: "floor",
         id: "3",
-        category: "The Gift Spot",
+        category: "the_gift_spot",
       ),
       Product(
         name: 'Retro Robot - 3D Model',
@@ -137,7 +137,7 @@ List<Product> getProductList(String category) {
         colors: ['Gray'],
         placement: "floor",
         id: "1",
-        category: "Electronics",
+        category: "electronics",
       ),
 
       Product(
@@ -152,7 +152,7 @@ List<Product> getProductList(String category) {
         colors: ['green', 'Black', 'Gray'],
         placement: "floor",
         id: "4",
-        category: "The Leafy Corner",
+        category: "the_leafy_corner",
       ),
     ];
   }

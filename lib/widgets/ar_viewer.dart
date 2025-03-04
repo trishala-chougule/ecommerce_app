@@ -3,12 +3,12 @@ import 'package:model_viewer_plus/model_viewer_plus.dart';
 import 'package:universal_platform/universal_platform.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:webview_flutter/src/webview_controller.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class ARViewerScreen extends StatefulWidget {
   final String modelPath;
 
   final String placement;
-
   const ARViewerScreen({
     super.key,
     required this.modelPath,
@@ -21,7 +21,7 @@ class ARViewerScreen extends StatefulWidget {
 class _ARViewerScreenState extends State<ARViewerScreen> {
   bool _isLoading = true;
   String _errorMessage = '';
-
+  late WebViewController _controller;
   @override
   void initState() {
     super.initState();
@@ -135,19 +135,31 @@ class _ARViewerScreenState extends State<ARViewerScreen> {
   }
 
   Widget _buildModelViewer() {
- /*   if (UniversalPlatform.isWeb) {
-      return ModelViewer(
-        src: widget.modelPath,
-        alt: "3D Astronaut",
+    return  ModelViewer(
+        src:  widget.modelPath,
+        iosSrc: UniversalPlatform.isIOS ? widget.modelPath : null,
+        //seamlessPoster: true,
+        environmentImage: 'neutral',
+        exposure: 1.0,
+        interactionPromptThreshold: 0,
+        shadowIntensity: 1,
         ar: true,
+        arScale: ArScale.fixed,
+        autoPlay: true,
+        arModes: ["scene-viewer", "quick-look", "webxr"],
+        arPlacement: ArPlacement.floor,
         autoRotate: true,
         cameraControls: true,
-        loading: Loading.eager,
-        autoPlay: true,
-        /*         shadowIntensity: 0, // Remove shadow effect
-        environmentImage: "none", // Disable environmental lighting */
+        disableZoom: true,
+        cameraOrbit: '0deg 45deg auto',
+        alt: '3D model',
+        
+
+        disablePan: true,
+        disableTap: true,
       );
-    } else if (UniversalPlatform.isAndroid || UniversalPlatform.isIOS) {*/
+    
+   /* if (UniversalPlatform.isWeb) {
       return ModelViewer(
         src: widget.modelPath,
         alt: "3D Model",
@@ -156,7 +168,7 @@ class _ARViewerScreenState extends State<ARViewerScreen> {
         autoRotate: true,
         loading: Loading.eager,
         cameraControls: true, //set to false
-        autoPlay: true,  //set to false
+        autoPlay: false,  //set to false
         disableZoom: true,
         disableTap: true, // Prevents accidental movement
         arPlacement: /*widget.placement == "floor"*/ widget.placement.contains("floor") ? ArPlacement.floor : ArPlacement.wall,
@@ -168,12 +180,38 @@ class _ARViewerScreenState extends State<ARViewerScreen> {
         exposure: 1.0,
         backgroundColor: Colors.transparent,
       );
-  /*  } else {
+    } else if (UniversalPlatform.isAndroid || UniversalPlatform.isIOS) {*/
+     /* return ModelViewer(
+        src: widget.modelPath,
+        alt: "3D Model",
+        ar: true,
+        arModes: ["scene-viewer", "quick-look", "webxr"],
+        autoRotate: true,
+        loading: Loading.eager,
+        cameraControls: false, 
+      //  autoPlay: false,  //set to false
+         disableZoom: true,
+       // disableTap: true, // Prevents accidental movement
+       // disablePan: true,
+        arPlacement: widget.placement == "floor" ? ArPlacement.floor : ArPlacement.wall,
+        arScale: ArScale.fixed,
+        iosSrc: UniversalPlatform.isIOS ? widget.modelPath : null,
+                backgroundColor: Colors.transparent,
+        //interactionPromptThreshold: 0,
+     //   cameraOrbit: "0deg 45deg auto",
+      //  shadowIntensity: 1,
+      //  exposure: 1.0,
+        
+
+      );*/
+  
+    
+  /* } else {
       return const Center(child: Text('Platform not supported'));
     }*/
   }
+
 }
 
-extension on WebViewController {
-  void evaluateJavascript(String s) {}
-}
+
+

@@ -7,7 +7,13 @@ import '../widgets/custom_app_bar.dart';
 import '../widgets/global_drawer.dart';
 
 class ProductDetails extends StatefulWidget {
-  static const routeName = '/productdetail';
+  static const routeName = '/productdetails';
+  final String id;
+  final String category;
+
+  // Constructor to accept the arguments
+  // Constructor to receive the data (id and category)
+  ProductDetails({super.key, required this.id, required this.category});
 
   @override
   _ProductDetailsState createState() => _ProductDetailsState();
@@ -19,13 +25,13 @@ class _ProductDetailsState extends State<ProductDetails> {
   @override
   Widget build(BuildContext context) {
     // Retrieve the selected category from route arguments
-    final arguments =
-        ModalRoute.of(context)!.settings.arguments as Map<String, String>;
-    final productId = arguments['id'];
-    final category = arguments['category'];
+    //final arguments = ModalRoute.of(context)!.settings.arguments as Map<String, String>;
+    // final productId = arguments['id'];
+    // final category = arguments['category'];
 
-    final Product product = getProductList(category!).firstWhere(
-        (product) => product.id == productId);
+    final Product product = getProductList(
+      widget.category,
+    ).firstWhere((product) => product.id == widget.id);
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
     return Scaffold(
@@ -225,8 +231,8 @@ class _ProductDetailsState extends State<ProductDetails> {
             padding: EdgeInsets.symmetric(horizontal: 7),
             child: _buildProductDetails(product),
           ),
-          SizedBox(height: 5,),
-         _buildViewQRCode(product.id, product.category),
+          SizedBox(height: 5),
+         // _buildViewQRCode(product.id, product.category),
         ],
       ),
     );
@@ -291,8 +297,8 @@ class _ProductDetailsState extends State<ProductDetails> {
           SizedBox(height: 2),
           if (_isQrVisible)
             QrImageView(
-              data:'https://yourdomain.com/productdetail?id=$id&category=$category',
-                 // 'https://ecommerce-app-dtz.pages.dev/productdetail/${id}?category=${category}',
+              data:
+                  'https://ecommerce-app-dtz.pages.dev/#/productdetails?id=$id&category=$category',
               version: QrVersions.auto,
               size: 200.0,
             ),
